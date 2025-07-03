@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./assets/scss/Custom-Bootstrap.css" />
+    <title>Travel Agency</title>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            height="40"
+            src="data:image/png;base64,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"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#"
+                >Home
+                <span class="visually-hidden-focusable">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#week-deal">Saldi</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#welcome-summer">Welcome Summer</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#last-minute">Last Minute</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#testimonials">Recensioni</a>
+            </li>
+          </ul>
+          <form class="d-flex my-2 my-lg-0" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Cerca posti da sogno"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">
+              Cerca
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div
+        class="text-center text-lg-start bg-light rounded shadow-sm p-5 pt-4 mt-5"
+      >
+        <h1 class="display-1 d-inline-block text-epicode-1 align-middle">
+          Eveline-R
+        </h1>
+        <p class="lead d-inline-block mb-0 align-middle">— Feel the Freedom</p>
+        <hr class="my-2" />
+        <p class="fs-3 fst-italic text-epicode-3 mb-5">
+          Scopri le destinazioni più calde del momento!
+        </p>
+        <!-- HO DOVUTO AGGIUNGERE <BUTTON></BUTTON> ALTRIMENTI NON FUNZIONAVA, probabilmente ho sbagliato qualcosa :( -->
+        <button class="btn btn-epicode-2">
+          <a
+            class="btn btn-epicode-2 btn-lg px-5 fw-bold text-light"
+            href="#day-deal"
+            role="button"
+            >Prenota ora</a
+          >
+        </button>
+      </div>
+      <!-- esercizio 3  -->
+      <section class="my-5 d-flex flex-column" id="week-deal">
+        <div class="d-flex justify-content-between">
+          <h3>Saldi</h3>
+          <button
+            type="button"
+            class="btn btn-sm btn-outline-epicode-2 border-0 align-self-center mb-4"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseWeekDeal"
+            aria-expanded="false"
+            aria-controls="collapseExample"
+          >
+            Nascondi sezione
+          </button>
+        </div>
+        <div class="row collapse show g-2 g-md-3 g-xl-5" id="collapseWeekDeal">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card border border-6 border-info">
+              <!-- modificato in 6  -->
+
+              <img
+                src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
+                class="card-img-top"
+                alt="maldives"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Titolo</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Officia et possimus aliquid deserunt veritatis natus ullam
+                  perspiciatis temporibus minima repudiandae!
+                </p>
+                <a href="#" class="btn btn-info">Prenota</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card border border-6 border-info">
+              <!-- modificato in 6  -->
+              <img
+                src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
+                class="card-img-top"
+                alt="maldives"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Titolo</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Officia et possimus aliquid deserunt veritatis natus ullam
+                  perspiciatis temporibus minima repudiandae!
+                </p>
+                <a href="#" class="btn btn-info">Prenota</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card border border-6 border-info">
+              <!-- modificato in 6  -->
+              <img
+                src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
+                class="card-img-top"
+                alt="maldives"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Titolo</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Officia et possimus aliquid deserunt veritatis natus ullam
+                  perspiciatis temporibus minima repudiandae!
+                </p>
+                <a href="#" class="btn btn-info">Prenota</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-md-none d-lg-block">
+            <div class="card border border-6 border-info">
+              <!-- modificato in 6  -->
+              <img
+                src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
+                class="card-img-top"
+                alt="maldives"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Titolo</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Officia et possimus aliquid deserunt veritatis natus ullam
+                  perspiciatis temporibus minima repudiandae!
+                </p>
+                <a href="#" class="btn btn-info">Prenota</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="my-5 d-flex flex-column" id="welcome-summer">
+        <div class="d-flex justify-content-between">
+          <h3>Welcome Summer</h3>
+          <button
+            type="button"
+            class="btn btn-sm btn-outline-epicode-2 border-0 align-self-center mb-4"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseWelcomeSummer"
+            aria-expanded="false"
+            aria-controls="collapseExample"
+          >
+            Nascondi sezione
+          </button>
+        </div>
+        <div class="row collapse show" id="collapseWelcomeSummer">
+          <div class="col-12 col-sm-6 col-xl-4 mb-4">
+            <div class="card shadow-lg border-0">
+              <img
+                src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
+                class="card-img-top"
+                alt="maldives"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Titolo</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Officia et possimus aliquid deserunt veritatis natus ullam
+                  perspiciatis temporibus minima repudiandae!
+                </p>
+                <a href="#" class="btn btn-info">Prenota</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-xl-4 mb-4">
+            <div class="card shadow-lg border-0">
+              <img
+                src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
+                class="card-img-top"
+                alt="maldives"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Titolo</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Officia et possimus aliquid deserunt veritatis natus ullam
+                  perspiciatis temporibus minima repudiandae!
+                </p>
+                <a href="#" class="btn btn-info">Prenota</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-xl-4 mb-4">
+            <div class="card shadow-lg border-0">
+              <img
+                src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
+                class="card-img-top"
+                alt="maldives"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Titolo</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Officia et possimus aliquid deserunt veritatis natus ullam
+                  perspiciatis temporibus minima repudiandae!
+                </p>
+                <a href="#" class="btn btn-info">Prenota</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-xl-4 mb-4">
+            <div class="card shadow-lg border-0">
+              <img
+                src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
+                class="card-img-top"
+                alt="maldives"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Titolo</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Officia et possimus aliquid deserunt veritatis natus ullam
+                  perspiciatis temporibus minima repudiandae!
+                </p>
+                <a href="#" class="btn btn-info">Prenota</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-xl-4 mb-4">
+            <div class="card shadow-lg border-0">
+              <img
+                src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
+                class="card-img-top"
+                alt="maldives"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Titolo</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Officia et possimus aliquid deserunt veritatis natus ullam
+                  perspiciatis temporibus minima repudiandae!
+                </p>
+                <a href="#" class="btn btn-info">Prenota</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-xl-4 mb-4">
+            <div class="card shadow-lg border-0">
+              <img
+                src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
+                class="card-img-top"
+                alt="maldives"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Titolo</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Officia et possimus aliquid deserunt veritatis natus ullam
+                  perspiciatis temporibus minima repudiandae!
+                </p>
+                <a href="#" class="btn btn-info">Prenota</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="my-5 d-none d-sm-block" id="day-deal">
+        <h3 class="mb-4">Offerta del giorno</h3>
+
+        <div class="row">
+          <div class="col col-lg-8">
+            <img
+              src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
+              class="img-fluid rounded shadow border border-10 border-info"
+              alt="maldives"
+            />
+          </div>
+          <div class="col col-lg-4">
+            <h3 class="display-4 lh-1">Fushifaru Maldives</h3>
+            <p class="font-monospace text-muted">15.01.2021-31.01.2021</p>
+            <p class="lead">
+              Ville a partire da 500 €,<br />
+              non fartele sfuggire!
+            </p>
+            <span class="badge rounded-pill text-bg-dark">Best offer</span>
+          </div>
+        </div>
+      </section>
+      <section class="my-5" id="last-minute">
+        <h3 class="mb-4">Last Minute</h3>
+        <div class="row">
+          <div class="col-6 col-md-4 col-lg mb-4">
+            <div class="card shadow border-0">
+              <img
+                src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
+                class="card-img"
+                alt="maldives"
+              />
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg mb-4">
+            <div class="card shadow border-0">
+              <img
+                src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
+                class="card-img"
+                alt="maldives"
+              />
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg mb-4">
+            <div class="card shadow border-0">
+              <img
+                src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
+                class="card-img"
+                alt="maldives"
+              />
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg mb-4">
+            <div class="card shadow border-0">
+              <img
+                src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
+                class="card-img"
+                alt="maldives"
+              />
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg mb-4">
+            <div class="card shadow border-0">
+              <img
+                src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
+                class="card-img"
+                alt="maldives"
+              />
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg mb-4">
+            <div class="card shadow border-0">
+              <img
+                src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
+                class="card-img"
+                alt="maldives"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="testimonials" class="my-5 pt-5s">
+        <h3 class="text-center">Dicono di noi</h3>
+        <div class="d-flex pb-4">
+          <img
+            class="border border-2 border-info rounded-circle"
+            height="60"
+            src="https://gimgs2.nohat.cc/thumb/f/640/svg-user-icon-picture--freesvgorg44928.jpg"
+          />
+          <div class="px-4">
+            <h6>Username</h6>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+        </div>
+        <div class="d-flex pb-4">
+          <img
+            class="border border-2 border-info rounded-circle"
+            height="60"
+            src="https://gimgs2.nohat.cc/thumb/f/640/svg-user-icon-picture--freesvgorg44928.jpg"
+          />
+          <div class="px-4">
+            <h6>Username</h6>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+        </div>
+        <div class="d-flex pb-4">
+          <img
+            class="border border-2 border-info rounded-circle"
+            height="60"
+            src="https://gimgs2.nohat.cc/thumb/f/640/svg-user-icon-picture--freesvgorg44928.jpg"
+          />
+          <div class="px-4">
+            <h6>Username</h6>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer
+      class="container-fluid bg-dark text-light d-flex flex-column justify-content-center align-items-center py-5"
+    >
+      <button
+        type="button"
+        class="btn btn-outline-secondary mb-4"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+      >
+        Contattaci
+      </button>
+
+      <span class="fs-10">© 2021 Kalina Travel LTD. All Rights Reserved.</span>
+    </footer>
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <h5 class="display-4 modal-title" id="exampleModalLabel">
+              Contact us
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="input-group mb-3">
+              <input
+                type="text"
+                class="form-control shadow-sm"
+                placeholder="Inserisci la tua email"
+                aria-label="Email"
+                aria-describedby="basic-addon1"
+              />
+            </div>
+            <div class="input-group">
+              <textarea
+                class="form-control shadow-sm"
+                aria-label="With textarea"
+                placeholder="Scrivi qui il tuo messaggio"
+              ></textarea>
+            </div>
+          </div>
+          <div class="modal-footer justify-content-center border-0">
+            <button
+              type="button"
+              class="btn btn-transparent"
+              data-bs-dismiss="modal"
+            >
+              Chiudi
+            </button>
+            <button type="button" class="btn btn-info shadow px-5">
+              Invia
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- BOOTSTRAP JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      window.onload = function () {
+        const countTravels = function () {
+          const cards = document.querySelectorAll(".card");
+
+          // alert("there are " + cards.length + " travels displayed in the page")
+        };
+        countTravels();
+
+        const addBadge = function () {
+          const cards = document.querySelectorAll("#welcome-summer .card");
+
+          for (let i = 0; i < cards.length; i++) {
+            const card = cards[i];
+            const span = `<span class="badge bg-danger position-absolute end-0 mt-2 me-2">HOT</span>`;
+            card.innerHTML += span;
+          }
+        };
+
+        addBadge(); //this adds hot badges on cards
+      };
+      const removeCards = function () {
+        const cards = document.querySelectorAll(".card");
+
+        for (let i = 0; i < cards.length; i++) {
+          const card = cards[i];
+          card.remove();
+        }
+      };
+
+      // removeCards(); // this removes every card from the page the card if uncommented,
+      // you should try to attach this function call to a button in the page or calling this from the browser's console
+    </script>
+  </body>
+</html>

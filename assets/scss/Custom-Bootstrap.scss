@@ -1,0 +1,64 @@
+@import "./functions";
+@import "./variables";
+
+// esercizio 1
+$font-sizes: map-merge(
+  $font-sizes,
+  (
+    7: $font-size-base * 0.9,
+    8: $font-size-base * 0.8,
+    9: $font-size-base * 0.7,
+    10: $font-size-base * 0.6,
+  )
+);
+
+// esercizio 2
+
+$border-widths: map-merge(
+  $border-widths,
+  (
+    6: 6px,
+    7: 7px,
+    8: 8px,
+    9: 9px,
+    10: 10px,
+  )
+);
+
+// esercizio 5
+$btn-padding-y: 0.75rem;
+$btn-padding-x: 2.5rem;
+
+//esercizio 6
+$gutter-width: 0.1rem;
+$grid-gutter-width: 0.5rem;
+
+// esercizio 7
+$card-bg: #212529;
+$card-color: #00ffea;
+$card-border-radius: 13px;
+
+//esercizio 8/9/10
+
+$info: #00ffea;
+$danger: #ff0077;
+$light: #f3eeff;
+
+//esercizio 11
+
+$badge-border-radius: 50rem;
+$input-border-radius: 50rem;
+$btn-border-radius: 50rem;
+
+//esercizio 12
+$theme-colors: map-merge(
+  $theme-colors,
+  (
+    "epicode-1": #5726c3,
+    "epicode-2": #8625a5,
+    "epicode-3": #cb2376,
+  )
+);
+
+// infine importo bootstrap.scss
+@import "./bootstrap.scss";
